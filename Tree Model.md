@@ -130,7 +130,7 @@ $$
     \begin{aligned}
     &L(y_i,f_{m-1}(x)+T(x;\Theta_m) \\
     &=[y_i-f_{m-1}(x)-T(x;\Theta_m)]^2 \\
-    &=[r-T(x;\Theta_m)]^2
+    &=[r-T(x;\Theta_m)]^2\\
     \end{aligned}
 $$
 其中，
@@ -147,7 +147,7 @@ $$f_{m}(x)=f_{m-1}(x)+T(x;\Theta_{m})$$
 $$
     \begin{aligned}
     L(y_i,f_m(x))&=L(y_i,f_{m-1}(x)+T(x;\Theta_{m}))\\
-    &\approx L(y_i,f_{m-1}(x))+[\frac{\partial L(y_i,f(x))}{\partial f(x)}]_{f(x)=f_{m-1}(x)}T(x;\Theta_m)
+    &\approx L(y_i,f_{m-1}(x))+[\frac{\partial L(y_i,f(x))}{\partial f(x)}]_{f(x)=f_{m-1}(x)}T(x;\Theta_m)\\
     \end{aligned}
 $$
 令
