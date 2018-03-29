@@ -128,9 +128,9 @@ $$\Theta_m={\arg\underset{\Theta_m}\min}L(y_i,f_{m-1}(x)+T(x;\Theta_m)$$
 对于回归问题，可以用平方误差做误差函数，即
 $$ 
     \begin{aligned}
-    &L(y_i,f_{m-1}(x)+T(x;\Theta_m) \\
-    &=[y_i-f_{m-1}(x)-T(x;\Theta_m)]^2 \\
-    &=[r-T(x;\Theta_m)]^2\\
+        &L(y_i,f_{m-1}(x)+T(x;\Theta_m) \\
+        &=[y_i-f_{m-1}(x)-T(x;\Theta_m)]^2 \\
+        &=[r-T(x;\Theta_m)]^2\\
     \end{aligned}
 $$
 其中，
@@ -146,11 +146,11 @@ $$f_{m}(x)=f_{m-1}(x)+T(x;\Theta_{m})$$
 那么将损失函数一阶泰勒展开
 $$
     \begin{aligned}
-    L(y_i,f_m(x))&=L(y_i,f_{m-1}(x)+T(x;\Theta_{m}))\\
-    &\approx L(y_i,f_{m-1}(x))+[\frac{\partial L(y_i,f(x))}{\partial f(x)}]_{f(x)=f_{m-1}(x)}T(x;\Theta_m)\\
+        L(y_i,f_m(x))&=L(y_i,f_{m-1}(x)+T(x;\Theta_{m}))\\
+        &\approx L(y_i,f_{m-1}(x))+[\frac{\partial L(y_i,f(x))}{\partial f(x)}]_{f(x)=f_{m-1}(x)}T(x;\Theta_m)
     \end{aligned}
 $$
-令
+令，
 $$r=-[\frac{\partial L(y_i,f(x))}{\partial f(x)}]_{f(x)=f_{m-1}(x)}$$
 易知$r$就是梯度的负方向，所以$T$不断的拟合$r$，往梯度的负方向搜寻即可。
 
@@ -161,11 +161,7 @@ $$Obj(t)=\sum_{i=1}^nL(y_i,\hat{y}^{t-1}+f_t(x_i))+\Omega(f_t)+constant$$
 $$\Omega(f_t)=\gamma T+\frac{1}{2}\lambda \sum_{j=1}^nw_j^2$$
 其中$T$表示叶子结点的数量，$w_j$表示叶子结点的权重。
 对$Obj(t)$二阶泰勒展开
-$$
-    \begin{aligned}
-        Obj(t) &\approx \sum_{i=1}^n[L(y_i,\hat{y}^{t-1})+g_if_t(x_i)+\frac{1}{2}h_if_t^2(x_i)]+\Omega(f_t)+constant
-    \end{aligned}
-$$
+$$Obj(t)\approx \sum_{i=1}^n[L(y_i,\hat{y}^{t-1})+g_if_t(x_i)+\frac{1}{2}h_if_t^2(x_i)]+\Omega(f_t)+constant$$
 其中$g_i$是$L(y_i,\hat{y}^{t-1})$对$\hat{y}^{t-1}$的一阶导数，$h_i$是$L(y_i,\hat{y}^{t-1})$对$\hat{y}^{t-1}$的二阶导数.
 因为$L(y_i,\hat{y}^{t-1})$是已知的，且对于当前需要拟合的树来说是固定值，拟合的目标函数有
 $$
@@ -188,8 +184,8 @@ $$C(t)=-\frac{1}{2}\frac{(G_L+G_R)^2}{H_L+H_R+\lambda}+\gamma+C$$
 $$C(T_t)=-\frac{1}{2}\frac{G_L^2}{H_L+\lambda}-\frac{1}{2}\frac{G_R^2}{H_R+\lambda}+2\gamma+C$$
 $$
     \begin{aligned}
-    Gain &= C(t) - C(T_t)\\
-    &=\frac{1}{2}[\frac{G_L^2}{H_L+\lambda}+\frac{1}{2}\frac{G_R^2}{H_R+\lambda}-\frac{(G_L+G_R)^2}{H_L+H_R+\lambda}] - \gamma
+        Gain &= C(t) - C(T_t)\\
+        &=\frac{1}{2}[\frac{G_L^2}{H_L+\lambda}+\frac{1}{2}\frac{G_R^2}{H_R+\lambda}-\frac{(G_L+G_R)^2}{H_L+H_R+\lambda}] - \gamma
     \end{aligned}
 $$
 当Gain大于阈值时即可分裂。
