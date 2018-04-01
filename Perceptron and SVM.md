@@ -383,8 +383,8 @@ $$\alpha_1^{new}=\alpha_1^{old}+y_1y_2(\alpha_2^{old}-\alpha_2^{new})$$
 第一个样本选择违反*KKT*条件最严重的点，即对每一个样本点检查其是否满足*KKT*条件（具体的解释可返回上面查看$\alpha$，$C$与$\xi$的关系部分）
 $$
     \begin{aligned}
-        \alpha_i &= 0\iff y_ig(x_i)\geq 1
-        0<\alpha_i&<C\iff y_ig(x_i)=1
+        \alpha_i &= 0\iff y_ig(x_i)\geq 1 \\
+        0<\alpha_i&<C\iff y_ig(x_i)=1 \\
         \alpha_i&=C\iff y_ig(x_i)\leq 1
     \end{aligned}
 $$
