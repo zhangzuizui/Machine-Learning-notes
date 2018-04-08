@@ -387,7 +387,7 @@ $$\alpha_2^{new,unc}=\alpha_2^{old}+\frac{y_2(E_2-E_1)}{\eta}$$
 其中，记
 $$g(x)=\sum_{i=1}^n\alpha_iy_iK(xi,x)+b$$
 令
-$$E_i=g(x_i)-y_i=(\sum_{j=1}^n\alpha_jy_jK(xj,x_i)+b)-y_i, \quad i=1,2$$
+$$E_i=g(x_i)-y_i=(\sum_{j=1}^n\alpha_jy_jK(x_j,x_i)+b)-y_i, \quad i=1,2$$
 当$i=1,2$时，$E_i$为函数$g(x)$对输入$x_i$的预测值与真实值$y_i$之差。
 上面提到过，$\alpha_2$实际是有一个约束范围的，因此
 $$ \alpha_2^{new}= 
