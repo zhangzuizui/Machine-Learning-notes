@@ -1,4 +1,4 @@
-#Optimal method
+# Optimal method
 ## IIS
 IIS的思路是，对于原优化问题$L(w_1,w_2,...,w_n)$找到一个诸如这样的新的方法$w_i\leftarrow w_i+\delta_i$进行更新，IIS适用于最大熵模型的优化。
 因此有

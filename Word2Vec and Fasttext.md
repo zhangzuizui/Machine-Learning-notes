@@ -1,4 +1,4 @@
-#Word2Vec
+# Word2Vec
 word2vec的难点就在于tricks有很多（其实也没多少，也就俩？）这篇[博文](https://blog.csdn.net/a819825294/article/details/52438625)里，对word2vec已经将的很清楚了，清楚的不能再清楚了，所以下面只做一些总结性的表述。
 ## Hierarchical Softmax
 1. 没什么标题
