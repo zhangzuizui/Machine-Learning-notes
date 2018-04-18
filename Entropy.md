@@ -37,7 +37,7 @@ $$H(p, q) = -\sum_{x}p(x)\log q(x)$$
 评价数据离散程度的方法，熵越小，离散程度越大，指标对综合评价的影响越大（理解：当所有样本的概率都相等时，熵最大，此时该指标对结果无任何影响甚至可以剔除）。
 
 $$E_i = -\frac{1}{\log n}\sum_{i=0}^ny_i\log y_i$$
-其中$y_i$是第$i$个样本的特征$y$占所有样本的特征$y$的比重。
+其中$y_i$是第$i$个样本的特征占所有样本的特征的比重。
 
 $$w_i=\frac{1-E_i}{\sum_{j=0}^m(1-E_j)}$$
 归一化一下即可得到第$i$个特征的权重。
@@ -53,7 +53,7 @@ $$
     \begin{aligned}
         &\max H(p)=-\sum_{x,y}\hat P(x)P(y|x)\log P(y|x) \\
         &\begin{aligned}
-            s.t. \quad &\sum_{i=1}^nE_{\hat P}(fi)-E_P(f_i)=0, \quad i=1,2,...,n \\
+            s.t. \quad &\sum_{i=1}^nE_{\hat P}(f_i)-E_P(f_i)=0, \quad i=1,2,...,n \\
             &\sum_{y}P(y|x)=1
         \end{aligned}
     \end{aligned}

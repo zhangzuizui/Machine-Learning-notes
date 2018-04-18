@@ -34,7 +34,7 @@ $$
         D&=\frac{1}{m}YY^T \\
         &=\frac{1}{m}(PX)(PX)^T \\
         &=P(\frac{1}{m}XX^T)P^T \\
-        &=PCP
+        &=PCP^T
     \end{aligned}
 $$
 $C$是$X$的协方差矩阵。
